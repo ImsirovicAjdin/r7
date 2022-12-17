@@ -12,7 +12,8 @@ Rails.application.routes.draw do
     
   # match "about", to: "main#index", via: :get
   match "about", to: "main#about", via: :get
-  
+  match "hello", to: "main#hello", via: :get
+
   get 'tasks/index'
   get 'tasks/new'
   get 'tasks/edit'
@@ -21,3 +22,8 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
 end
+
+
+# redirect_to(controller: 'main', action: 'index')
+# redirect_to(action: 'index')
+# redirect_to('https://nytimes.com')
