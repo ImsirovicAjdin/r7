@@ -1,11 +1,11 @@
 class MainController < ApplicationController
   
   def index
-    render('about')
+    # render('about')
   end
 
   def about
-    render('index')
+    # render('index')
   end
 
 end
