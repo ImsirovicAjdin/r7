@@ -1,2 +1,28 @@
 <h1>Main#index</h1>
 <p>Heeeeelllooooo</p>
+
+<% x = 1 + 1 %><br>
+<%= x %><br>
+
+<% tasks = ['Fold laundry', 'Sweep porch', 'Wash dishes', 'Mow lawn'] %>
+
+# wrong approach, trips up beginners:
+<%
+    tasks.each do |task|
+        puts task # outputs to standard out!
+    end
+%>
+
+# right approach:
+<ul>
+<% tasks.each do |task| %>
+    <li><%= task %></li>
+<% end %>
+</ul>
+
+
+<%# 
+Embedding Ruby
+there are two erb tags
+< % code % > the Ruby code inside is processed, but it will not output the template
+< % = code % > processed the Ruby code inside, outputs the template %>
