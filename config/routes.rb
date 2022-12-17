@@ -10,7 +10,9 @@ Rails.application.routes.draw do
     # you can even include a dynamic segment...
       # match "tasks:id", to: "tasks#show", via: :get 
     
-  match "about", to: "main#index", via: :get
+  # match "about", to: "main#index", via: :get
+  match "about", to: "main#about", via: :get
+  
   get 'tasks/index'
   get 'tasks/new'
   get 'tasks/edit'
