@@ -5,3 +5,40 @@
     <li><%= task %></li>
 <% end %>
 </ul>
+
+<%= link_to('Homepage', {controller: 'main', action: 'index'}) %>
+
+
+<%# 
+
+HTML Links
+
+<a href="/main/index">Go to main / index </a> ... but these are uncommon
+< % = link_to(text, target) % >
+
+The link target can be a string: "/main/index"
+...or you can provide a hash with a ctrl and action:
+{controller: 'main', action: 'index'}
+
+%>
+
+<%# Rails link with parameters %>
+<%= link_to('Link',
+    {
+        controller: 'main',
+        action: 'hello',
+        id: 20,
+        page: 5
+    }
+) %>
+
+<%# The params method
+With the link_to helper method, you can just add parameters inside the hash and let Rails handle turning that into the appropriate URL string (with query parameters). It'll still put parts of the route on the left of the question mark, and the parameters on the right. The result will be the same as if writing:
+/main/hello?id=20&page=5
+When the link is clicked, the request will be sent to Rails and all of the parameters will be put into an object called params, where you can access them easily. Most of the time you'll work with them in the controller, but they're also available (accessible) in the view. Rails will put all GET and POST parameters into that same object. GET values are parameters from the URL, POST values are submitted by a web form. In some languages like PHP, these are kept separate, but in Rails, they're merged togehter. REMEMBER, all the values in parameters are STRINGS, including numbers that get sent.
+ACCESSING PARAMETER VALUES:
+In your controller action, you can retrieve values out of params by putting the key for the value you want inside square brackets.
+params[:id]
+params['id']
+...it's a special hash that lets you use either a symbol or a string as a key to find the value.
+ %>
