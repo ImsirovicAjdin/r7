@@ -39,3 +39,10 @@ end
     # rails generate model Task name:string description:text position:integer completed:boolean
 
 # Try out: rails generate migration DoNothingYet
+
+# OTHER USEFUL MIGRATION COMMANDS
+
+# Run Migrations
+  # rails db:migrate:status
+  # rails db:migrate VERION=0
+  # rails db:migrate VERSION=20221231235959
