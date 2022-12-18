@@ -26,3 +26,19 @@ Embedding Ruby
 there are two erb tags
 < % code % > the Ruby code inside is processed, but it will not output the template
 < % = code % > processed the Ruby code inside, outputs the template %>
+
+<%#
+VARIABLES VS INSTANCE VARIABLES
+
+variable
+@instance_variable
+
+A regular variable has scope only inside a 
+particular action.
+
+An instance variable has scope throughout the controller class, is avaialable to all methods inside that class.
+
+Rails also make those instance variables available to the template, so a template can automatically access any template variables you've set.
+
+This makes it easy to pass data to your views.
+%>
