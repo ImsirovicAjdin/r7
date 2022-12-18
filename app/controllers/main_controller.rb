@@ -6,6 +6,8 @@ class MainController < ApplicationController
 
   def about
     @created_by = "Ajdin"
+    @id = params['id']
+    @page = params[:page]
     # render('index')
   end
 
@@ -14,3 +16,5 @@ class MainController < ApplicationController
   end
 
 end
+
+# Now let's examine how to read those params inside a controller
